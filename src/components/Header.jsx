@@ -18,13 +18,13 @@ const Header = () => {
         {/* <!-- Menu --> */}
         <div class="collapse navbar-collapse" id="navbar">
             <ul class="navbar-nav mx-auto">
-                <li class="nav-item dropdown"> <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Home <i class="fa-solid fa-angle-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="index.html" class="dropdown-item active"><span>Home Image</span></a></li>
-                        <li><a href="index2.html" class="dropdown-item"><span>Home Slider</span></a></li>
-                        <li><a href="index3.html" class="dropdown-item"><span>Home Video</span></a></li>
-                        <li><a href="index4.html" class="dropdown-item"><span>Home Slideshow</span></a></li>
-                    </ul>
+                <li class="nav-item dropdown"> <a class="nav-link active dropdown-toggle" href="/" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Home </a>
+                    {/* <ul class="dropdown-menu">
+                        <li><a href="/" class="dropdown-item active"><span>Home Image</span></a></li>
+                        <li><a href="/" class="dropdown-item"><span>Home Slider</span></a></li>
+                        <li><a href="/" class="dropdown-item"><span>Home Video</span></a></li>
+                        <li><a href="/" class="dropdown-item"><span>Home Slideshow</span></a></li>
+                    </ul> */}
                 </li>
                 <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                 <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Rooms <i class="fa-solid fa-angle-down"></i></a>
@@ -49,7 +49,7 @@ const Header = () => {
                         <li><a href="offers.html" class="dropdown-item"><span>Offers</span></a></li>
                     </ul>
                 </li>
-                <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Pages <i class="fa-solid fa-angle-down"></i></a>
+                {/* <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Pages <i class="fa-solid fa-angle-down"></i></a>
                     <ul class="dropdown-menu">
                         <li><a href="restaurant.html" class="dropdown-item"><span>Restaurant</span></a></li>
                         <li><a href="spa.html" class="dropdown-item"><span>Spa & Wellness</span></a></li>
@@ -61,7 +61,7 @@ const Header = () => {
                         <li><a href="gallery-video.html" class="dropdown-item"><span>Video Gallery</span></a></li>
                         <li><a href="404.html" class="dropdown-item"><span>404 Page</span></a></li>
                     </ul>
-                </li>
+                </li> */}
                 <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
             </ul>
             <div class="navbar-right">

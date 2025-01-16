@@ -1,8 +1,8 @@
 import React from 'react';
 // import { Link } from 'react-router-dom';
 import logo from '../../logo.png';
-import Header from '../../components/Header'
 import Hero from '../../pages/UserSide/Hero'
+import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 
 const Home = () => {

@@ -5446,6 +5446,9 @@ body.mfp-zoom-out-cur {
 .footer .top .item .logo {
     width: 130px;
     margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
 .footer .top .item h2 {
     color: #fff;
