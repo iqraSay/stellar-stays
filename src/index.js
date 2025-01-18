@@ -16,7 +16,7 @@ import 'bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css';
 import 'vegas/dist/vegas.min.css'; // Vegas Slider
 
 // Global JS Imports
-import './custom'
+import './Js/custom'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

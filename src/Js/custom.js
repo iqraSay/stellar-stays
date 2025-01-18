@@ -14,7 +14,7 @@ import 'select2/dist/css/select2.min.css';
 import 'select2';
 import 'bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css';
 import 'bootstrap-datepicker';
-import './scrollIt.min'
+import '../scrollIt.min'
 window.$ = window.jQuery = $;
 var jQuery = require('jquery');
 jQuery.noConflict();

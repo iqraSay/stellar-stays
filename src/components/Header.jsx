@@ -11,7 +11,6 @@ const Header = () => {
         {/* <!-- Logo --> */}
         <div class="logo-wrapper">
             <a class="logo" href="index.html"> <img src={logo} class="logo-img" alt="" /> </a>
-            {/* <!-- <div class="logo"><h2>Rixos</h2></div> --> */}
         </div>
         {/* <!-- Button --> */}
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span> </button>

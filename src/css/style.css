@@ -184,21 +184,19 @@ textarea {
 .form-control {
     display: block;
     width: 100%;
-    margin-bottom: 15px;
     padding: 15px 20px;
     font-size: 17px;
     font-family: "Urbanist", sans-serif;
     font-size: 17px;
     font-weight: 400;
     line-height: 1.5em;
-    color: #999;
+    color: #fff;
     background-color: transparent;
     background-clip: padding-box;
     border: 1px solid rgba(203, 157, 85, 0.3);
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    border-radius: 30px;
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
     outline: none;
 }
@@ -223,7 +221,6 @@ button:hover {
     border: none;
 }
 select {
-    padding: 10px;
     border-radius: 5px;
 }
 textarea:focus,
@@ -5228,16 +5225,19 @@ body.mfp-zoom-out-cur {
     content: "\e64b";
     font-family: "themify";
     font-size: 10px;
-    color: #fff;
+    color: #000;
     font-weight: normal;
     line-height: 15px;
 }
 .select2 {
     width: 100%;
     background: transparent;
+    color: #E2CC80;
+    padding: 18.25px 10px;
 }
 .select2 *:focus {
     outline: none !important;
+    color:#000
 }
 .select2-container--default .select2-results > .select2-results__options {
     max-height: 500px;
