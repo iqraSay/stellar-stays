@@ -14,7 +14,7 @@ const Booking = () => {
               <div className="col1 c1">
                 <div className=" border-l border-b border-t border-r br-5005">
                   <label>Check in</label>
-                  <div className="input1_inner">
+                  <div className="">
                     <input
                       type="date"
                       className="form-control  "
@@ -26,7 +26,7 @@ const Booking = () => {
               <div className="col1 c2">
                 <div className="border-l border-b border-t border-r">
                   <label>Check out</label>
-                  <div className="input1_inner">
+                  <div className="">
                     <input
                       type="date"
                       className="form-control "
