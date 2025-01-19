@@ -30,11 +30,9 @@ const About = () => {
               <a href="about.html" class="button-3 mb-15">
                 About Hotel
               </a>
-              <div class="phone">
                 <a href="tel:+12345678910">
-                  <i class="fa-solid fa-phone"></i>+1 234 567 8910
+                  <i class="fa-solid fa-phone" style={{margin: '10px',}}></i>+1 234 567 8910
                 </a>
-              </div>
             </div>
             <div class="col-lg-3 offset-lg-1 col-md-6 mb-20 mt-120">
               {" "}
