@@ -119,7 +119,7 @@ $(function () {
             , autoplay: false
             , autoplayTimeout: 5000
             , nav: true
-            , navText: ['<i class="fa-light fa-angle-left" aria-hidden="true"></i>', '<i class="fa-light fa-angle-right" aria-hidden="true"></i>']
+            , navText: ['<i class="fa-solid fa-angle-left" aria-hidden="true"></i>', '<i class="fa-solid fa-angle-right" aria-hidden="true"></i>']
             , responsiveClass: true
             , responsive: {
                 0: {
@@ -142,7 +142,7 @@ $(function () {
             , autoplayTimeout: 5000
             , animateOut: 'fadeOut'
             , nav: true
-            , navText: ['<i class="fa-light fa-angle-left" aria-hidden="true"></i>', '<i class="fa-light fa-angle-right" aria-hidden="true"></i>']
+            , navText: ['<i class="fa-solid fa-angle-left" aria-hidden="true"></i>', '<i class="fa-solid fa-angle-right" aria-hidden="true"></i>']
         });
         owl.on('changed.owl.carousel', function (event) {
             var item = event.item.index - 2; // Position of the current item
@@ -171,7 +171,7 @@ $(function () {
         , smartSpeed: 1000
         , dots: false
         , nav: false
-        , navText: ["<span class='fa-light fa-angle-left'></span>", "<span class='fa-light fa-angle-right'></span>"]
+        , navText: ["<span class='fa-solid fa-angle-left'></span>", "<span class='fa-solid fa-angle-right'></span>"]
         , autoplayHoverPause: true
         , responsiveClass: true
         , responsive: {
@@ -197,7 +197,7 @@ $(function () {
         , dots: false
         , autoplayHoverPause: true
         , nav: false
-        , navText: ["<span class='fa-light fa-angle-left'></span>", "<span class='fa-light fa-angle-right'></span>"]
+        , navText: ["<span class='fa-solid fa-angle-left'></span>", "<span class='fa-solid fa-angle-right'></span>"]
         , responsiveClass: true
         , responsive: {
             0: {
@@ -222,7 +222,7 @@ $(function () {
         , dots: false
         , autoplayHoverPause: true
         , nav: false
-        , navText: ["<span class='fa-light fa-angle-left'></span>", "<span class='fa-light fa-angle-right'></span>"]
+        , navText: ["<span class='fa-solid fa-angle-left'></span>", "<span class='fa-solid fa-angle-right'></span>"]
         , responsiveClass: true
         , responsive: {
             0: {
@@ -248,7 +248,7 @@ $(function () {
         , dots: false
         , autoplayHoverPause: true
         , nav: false
-        , navText: ["<span class='fa-light fa-angle-left'></span>", "<span class='fa-light fa-angle-right'></span>"]
+        , navText: ["<span class='fa-solid fa-angle-left'></span>", "<span class='fa-solid fa-angle-right'></span>"]
         , responsiveClass: true
         , responsive: {
             0: {
@@ -272,7 +272,7 @@ $(function () {
         autoplayTimeout: 5000,
         dots: true,
         nav: true,
-        navText: ["<span class='fa-light fa-angle-left'></span>", "<span class='fa-light fa-angle-right'></span>"],
+        navText: ["<span class='fa-solid fa-angle-left'></span>", "<span class='fa-solid fa-angle-right'></span>"],
         responsiveClass: true,
         responsive: {
             0: {
@@ -299,7 +299,7 @@ $(function () {
         , autoplayTimeout: 5000
         , dots: false
         , nav: true
-        , navText: ['<i class="fa-light fa-angle-left"></i>', '<i class="fa-light fa-angle-right"></i>']
+        , navText: ['<i class="fa-solid fa-angle-left"></i>', '<i class="fa-solid fa-angle-right"></i>']
         , autoplayHoverPause:true
         , responsiveClass: true
         , responsive:{
@@ -368,7 +368,7 @@ $(function () {
         , dots: true
         , autoplayHoverPause: true
         , nav: false
-        , navText: ["<span class='fa-light fa-angle-left'></span>", "<span class='fa-light fa-angle-right'></span>"]
+        , navText: ["<span class='fa-solid fa-angle-left'></span>", "<span class='fa-solid fa-angle-right'></span>"]
         , responsiveClass: true
         , responsive: {
             0: {
@@ -397,7 +397,7 @@ $(function () {
         , dots: false
         , autoplayHoverPause: true
         , nav: true
-        , navText: ["<span class='fa-light fa-angle-left'></span>", "<span class='fa-light fa-angle-right'></span>"]
+        , navText: ["<span class='fa-solid fa-angle-left'></span>", "<span class='fa-solid fa-angle-right'></span>"]
         , responsiveClass: true
         , responsive: {
             0: {
