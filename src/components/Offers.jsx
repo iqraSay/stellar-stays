@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import React from "react";
 import o1 from "../assets/offer1.jpg";
 import o2 from "../assets/offer2.jpg";
@@ -26,9 +27,9 @@ const Offers = () => {
                   <div class="title">Stay</div>
                   <div class="arrow">
                     {" "}
-                    <a href="#">
+                    <Link to="/rooms">
                       <span class="fa-solid fa-arrow-right"></span>
-                    </a>{" "}
+                    </Link>{" "}
                   </div>
                 </div>
                 <div class="price">25% off</div>
@@ -44,9 +45,9 @@ const Offers = () => {
                   <div class="title">Dine</div>
                   <div class="arrow">
                     {" "}
-                    <a href="#">
+                    <Link to="/restaurant">
                       <span class="fa-solid fa-arrow-right"></span>
-                    </a>{" "}
+                    </Link>{" "}
                   </div>
                 </div>
                 <div class="price">10% off</div>
@@ -62,15 +63,15 @@ const Offers = () => {
                   <div class="title">Relax</div>
                   <div class="arrow">
                     {" "}
-                    <a href="#">
+                    <Link to="spa">
                       <span class="fa-solid fa-arrow-right"></span>
-                    </a>{" "}
+                    </Link>{" "}
                   </div>
                 </div>
                 <div class="price">20% off</div>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6">
+            {/* <div class="col-lg-3 col-md-6">
               <div class="item">
                 <div class="img">
                   {" "}
@@ -87,7 +88,7 @@ const Offers = () => {
                 </div>
                 <div class="price">35% off</div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

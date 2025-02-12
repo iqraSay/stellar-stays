@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import i1 from '../assets/about1r.jpg'
 import i2 from '../assets/about2r.jpg'
 
@@ -27,9 +28,9 @@ const About = () => {
               Everything we do is instinctive and insightful,
               creating an emotional connection with each guest.
               </p>
-              <a href="about.html" class="button-3 mb-15">
+              <Link to="/about" class="button-3 mb-15">
                 About Hotel
-              </a>
+              </Link>
                 <a href="tel:+12345678910">
                   <i class="fa-solid fa-phone" style={{margin: '10px',}}></i>+1 234 567 8910
                 </a>
