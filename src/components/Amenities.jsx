@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 import bg from '../assets/bg2.jpg'
 
 const Amenities = () => {
@@ -16,7 +17,7 @@ const Amenities = () => {
                 <div class="col-lg-4 col-md-12 mb-30">
                     <div class="section-subtitle">Hotel Services</div>
                     <div class="section-title">Amenities</div>
-                    <p class="mb-25">The experience elementum sesue in the miss aucantion alesun in sapien fermen the miss caleustion in the sapien.</p> <a href="amenities.html" class="button-3">All Amenities</a>
+                    <p class="mb-25">The experience elementum sesue in the miss aucantion alesun in sapien fermen the miss caleustion in the sapien.</p> <Link to="/amenities" class="button-3">All Amenities</Link>
                 </div>
                 <div class="col-lg-8 col-md-12">
                     <div class="row">

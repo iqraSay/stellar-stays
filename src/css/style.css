@@ -42,6 +42,7 @@
 40. toTop Button style
 41. Overlay Effect Bg Image style
 42. Responsive style
+43. mission card style
 
 ==================================== */
 
@@ -2032,6 +2033,7 @@ blockquote cite:before {
 
 
 /* ======= About style ======= */
+
 .about {
     position: relative;
 }
@@ -2057,6 +2059,23 @@ blockquote cite:before {
     margin-right: 10px;
     border: 1px solid rgba(255,255,255,0.7);
 }
+.tab-section-content-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  
+  .image-container {
+    flex: 0 0 30%; /* 30% width on large screens */
+    padding-right: 20px;
+    margin-bottom: 20px; /* Adds space below the image */
+  }
+  
+  .text-content {
+    flex: 1;
+    padding-left: 20px;
+  }
+  
 .about .animation-float1 {
     animation: float1 4000ms linear 800ms infinite alternate both;
 }
@@ -2085,6 +2104,19 @@ blockquote cite:before {
         transform: translateY(30px);
     }
 }
+@media (max-width: 960px) {
+    .image-container {
+      display: none; /* Hide the image on screens smaller than 960px */
+    }
+  
+    .tab-section-content-box {
+      flex-direction: column; /* Stack the text vertically */
+    }
+  
+    .text-content {
+      flex: 0 0 100%; /* Text takes full width */
+    }
+  }
 
 
 /* ======= Rooms 3 style ======= */
@@ -5390,3 +5422,88 @@ blockquote cite:before {
         font-size: 21px;
     }
 }
+
+/* ======= Mission card style ======= */
+/* Card styles */
+.tab-section-content-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+  }
+  
+  .mission-card {
+    background-color: transparent; /* Make the background transparent by default */
+    border: 2px solid #E2CC80; /* Set border color */
+    border-radius: 8px;
+    padding: 20px;
+    width: 230px;
+    height: 300px; /* Ensure cards have the same height */
+    text-align: center;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .mission-card h4 {
+    font-size: 16px;
+    color: #E2CC80; /* Set heading color to match the border */
+    margin-bottom: 15px;
+  }
+  
+  .mission-card p {
+    font-size: 14px;
+    color: #555; /* Default text color */
+    margin-bottom: 15px;
+    line-height: 1.6;
+  }
+  
+  /* Hover effect */
+  .mission-card:hover {
+    background-color: #E2CC80;
+    color: #fff;
+    font-size: 19px; /* Increase font size by 5px on hover */
+  }
+  
+  .mission-card:hover p {
+    color: #fff; /* Ensure text color changes on hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 960px) {
+    .tab-section-content-box {
+      justify-content: center;
+    }
+  
+    .mission-card {
+      width: 100%;
+      max-width: 350px; /* Ensures it doesn’t get too wide */
+    }
+  }
+  
+  /* Hover effect */
+  .mission-card:hover {
+    background-color: #E2CC80;
+    color: #fff;
+    font-size: 19px; /* Increase font size by 5px on hover */
+  }
+
+  .mission-card:hover h4 {
+    color: #1b1b1b; /* Ensure text color changes on hover */
+  }
+  
+  .mission-card:hover p {
+    color: #fff; /* Ensure text color changes on hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 960px) {
+    .tab-section-content-box {
+      justify-content: center;
+    }
+  
+    .mission-card {
+      width: 100%;
+      max-width: 350px; /* Ensures it doesn’t get too wide */
+    }
+  }
+  
