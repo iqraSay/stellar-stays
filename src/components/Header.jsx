@@ -50,17 +50,12 @@ const Header = () => {
                   About
                 </Link>
               </li>
-              <li class="nav-item dropdown">
-                {" "}
+              <li class="nav-item">
                 <Link
                   class="nav-link "
                   to="/rooms"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  data-bs-auto-close="outside"
-                  aria-expanded="false"
                 >
-                  Rooms{" "}
+                  Rooms
                 </Link>
                 {/* <ul class="dropdown-menu">
                         <li><Link to="/" class="dropdown-item"><span>Rooms 01</span></Link></li>

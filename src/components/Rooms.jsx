@@ -65,7 +65,7 @@ const Rooms = () => {
                             <div class="img"> <img src={r2} alt=""/> </div>
                             <div class="wrap">
                             <div class="cont">
-                                    <div class="price">$2000 / night</div>
+                                    <div class="price">₹2000 / night</div>
                                     <h3><a href="#">Family Room</a></h3>
                                     <div class="details"> <i class="fa-solid fa-bed mr-5 gold"></i>4 Bed <i class="fa-solid fa-expand mr-5 gold"></i>350 sqm <i class="fa-solid fa-bath mr-5 gold"></i>2 Bathroom  </div>
                                 </div>
@@ -76,7 +76,7 @@ const Rooms = () => {
                             <div class="img"> <img src={r3} alt=""/> </div>
                             <div class="wrap">
                             <div class="cont">
-                                    <div class="price">$3500 / night</div>
+                                    <div class="price">₹3500 / night</div>
                                     <h3><a href="#">Double Room</a></h3>
                                     <div class="details"> <i class="fa-solid fa-bed mr-5 gold"></i>4 Bed <i class="fa-solid fa-expand mr-5 gold"></i>700 sqm <i class="fa-solid fa-bath mr-5 gold"></i>2 Bathroom  </div>
                                 </div>
@@ -87,7 +87,7 @@ const Rooms = () => {
                             <div class="img"> <img src={r4} alt=""/> <span class="discount"><i class="fa-solid fa-badge-percent mr-5"></i> 30% Off</span> </div>
                             <div class="wrap">
                             <div class="cont">
-                                    <div class="price">$3000 / night</div>
+                                    <div class="price">₹3000 / night</div>
                                     <h3><a href="#">Superior Room</a></h3>
                                     <div class="details"> <i class="fa-solid fa-bed mr-5 gold"></i>3 Bed <i class="fa-solid fa-expand mr-5 gold"></i>600 sqm <i class="fa-solid fa-bath mr-5 gold"></i>2 Bathroom  </div>
                                 </div>
@@ -98,7 +98,7 @@ const Rooms = () => {
                             <div class="img"> <img src={r5} alt=""/><span class="discount"><i class="fa-solid fa-badge-percent mr-5"></i> 40% Off</span> </div>
                             <div class="wrap">
                                 <div class="cont">
-                                    <div class="price">$3500 / night</div>
+                                    <div class="price">₹3500 / night</div>
                                     <h3><a href="#">Wellness Room</a></h3>
                                     <div class="details"> <i class="fa-solid fa-bed mr-5 gold"></i>4 Bed <i class="fa-solid fa-expand mr-5 gold"></i>350 sqm <i class="fa-solid fa-mug-saucer mr-5 gold"></i>Breakfast  </div>
                                 </div>
@@ -109,7 +109,7 @@ const Rooms = () => {
                             <div class="img"> <img src={r6} alt=""/> </div>
                             <div class="wrap">
                                 <div class="cont">
-                                    <div class="price">$4000 / night</div>
+                                    <div class="price">₹4000 / night</div>
                                     <h3><a href="#">King Room</a></h3>
                                     <div class="details"> <i class="fa-solid fa-bed mr-5 gold"></i>4 Bed <i class="fa-solid fa-expand mr-5 gold"></i>400 Sqm <i class="fa-solid fa-bath mr-5  gold "></i>2 Bathroom </div>
                                 </div>

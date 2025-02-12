@@ -45,7 +45,7 @@ const Contact = () => {
                       <div class="contents">
                         {" "}
                         <span class="fa-thin fa-location-dot"></span>
-                        <h2 class="title">Rixos Hotel, USA</h2>
+                        <h2 class="title">Stellar Stays Luxury Hotel</h2>
                         <p class="text">
                           45 Shanti Hills,Viman Nagar <br />
                           Pune - 411014, Maharashtra, India
@@ -138,7 +138,6 @@ const Contact = () => {
 
       {/* <!-- FAQs --> */}
       <Faq />
-    
       <Footer />
     </div>
   );
