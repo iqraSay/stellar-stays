@@ -15,6 +15,7 @@ import AboutUs from './pages/UserSide/AboutUs';
 import Contact from './pages/UserSide/Contact';
 import Rooms from './pages/UserSide/Rooms';
 import Facilities from './pages/UserSide/Facilities';
+import Amenities from './pages/UserSide/Amenities';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       <Route path='/contact' element={<Contact />} />
       <Route path='/rooms' element={<Rooms />} />
       <Route path='/facilities' element={<Facilities />} />
+      <Route path='/amenities' element={<Amenities />} />
       <Route path='*' element ={<Error/>} />
 
       </Routes>
