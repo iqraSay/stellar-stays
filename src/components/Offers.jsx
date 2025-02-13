@@ -45,7 +45,7 @@ const Offers = () => {
                   <div class="title">Dine</div>
                   <div class="arrow">
                     {" "}
-                    <Link to="/restaurant">
+                    <Link to="/facilities">
                       <span class="fa-solid fa-arrow-right"></span>
                     </Link>{" "}
                   </div>
@@ -63,7 +63,7 @@ const Offers = () => {
                   <div class="title">Relax</div>
                   <div class="arrow">
                     {" "}
-                    <Link to="spa">
+                    <Link to="/facilities">
                       <span class="fa-solid fa-arrow-right"></span>
                     </Link>{" "}
                   </div>
@@ -71,7 +71,7 @@ const Offers = () => {
                 <div class="price">20% off</div>
               </div>
             </div>
-            {/* <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-6">
               <div class="item">
                 <div class="img">
                   {" "}
@@ -81,14 +81,14 @@ const Offers = () => {
                   <div class="title">Weddings & Events</div>
                   <div class="arrow">
                     {" "}
-                    <a href="#">
+                    <Link to="/eventvenue">
                       <span class="fa-solid fa-arrow-right"></span>
-                    </a>{" "}
+                    </Link>{" "}
                   </div>
                 </div>
                 <div class="price">35% off</div>
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
       </section>
