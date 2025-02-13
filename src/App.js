@@ -20,9 +20,9 @@ import EventVenue from "./pages/UserSide/EventVenue";
 import SignUp from "./pages/UserSide/SignUp";
 import Login from "./pages/UserSide/Login";
 
-import Sidebar from "./pages/AdminSide/Sidebar";
-import AdminLayout from "./pages/AdminSide/AdminLayout";
 import Dashboard from "./pages/AdminSide/Dashboard";
+import AdminLogin from "./pages/AdminSide/Login";
+import AddAdmin from "./pages/AdminSide/AddAdmin";
 
 
 function App() {
@@ -31,6 +31,7 @@ function App() {
       <Routes>
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/admin/login" element={<AdminLogin />} />
 
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutUs />} />
@@ -41,21 +42,7 @@ function App() {
         <Route path="/eventvenue" element={<EventVenue />} />
         <Route path="*" element={<Error />} />
 
-        <Route path="/admin/*" element={<AdminLayout />}>
-          <Route path="dashboard" element={<Dashboard />} />
-          {/* <Route path="rooms" element={<RoomManagement />} />
-          <Route path="reservations" element={<ReservationManagement />} />
-          <Route path="reports" element={<RevenueReports />} />
-          <Route path="customers" element={<CustomerManagement />} />
-          <Route path="admins" element={<AdminManagement />} />
-          <Route path="room-types" element={<RoomTypeManagement />} />
-          <Route path="logout" element={<Logout />} /> */}
-        </Route>
-      </Routes>
-      <div>
-      <Sidebar />
-      <div className="content">
-        <Routes>
+        <Route path="/admin/add-admin" element={<AddAdmin />} />
           <Route path="/admin/dashboard" element={<Dashboard />} />
           {/* <Route path="/admin/rooms" element={<RoomManagement />} />
           <Route path="/admin/reservations" element={<ReservationManagement />} />
@@ -65,8 +52,7 @@ function App() {
           <Route path="/admin/room-types" element={<RoomTypeManagement />} />
           <Route path="/admin/logout" element={<Logout />} /> */}
         </Routes>
-      </div>
-    </div>
+      
     </div>
   );
 }
