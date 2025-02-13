@@ -99,16 +99,6 @@ const Header = () => {
                       <span>Event Venues</span>
                     </Link>
                   </li>
-                  <li>
-                    <Link to="/spa" class="dropdown-item">
-                      <span>Spa</span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/restaurant" class="dropdown-item">
-                      <span>Restaurant</span>
-                    </Link>
-                  </li>
                 </ul>
               </li>
               {/* <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Pages <i class="fa-solid fa-angle-down"></i></a>

@@ -14,6 +14,7 @@ import Home from './pages/UserSide/Home'
 import AboutUs from './pages/UserSide/AboutUs';
 import Contact from './pages/UserSide/Contact';
 import Rooms from './pages/UserSide/Rooms';
+import Facilities from './pages/UserSide/Facilities';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <Route path='/about' element={<AboutUs />} />
       <Route path='/contact' element={<Contact />} />
       <Route path='/rooms' element={<Rooms />} />
+      <Route path='/facilities' element={<Facilities />} />
       <Route path='*' element ={<Error/>} />
 
       </Routes>
