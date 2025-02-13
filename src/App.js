@@ -16,6 +16,7 @@ import Contact from './pages/UserSide/Contact';
 import Rooms from './pages/UserSide/Rooms';
 import Facilities from './pages/UserSide/Facilities';
 import Amenities from './pages/UserSide/Amenities';
+import EventVenue from './pages/UserSide/EventVenue';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
       <Route path='/rooms' element={<Rooms />} />
       <Route path='/facilities' element={<Facilities />} />
       <Route path='/amenities' element={<Amenities />} />
+      <Route path='/eventvenue' element={<EventVenue />} />
       <Route path='*' element ={<Error/>} />
 
       </Routes>
