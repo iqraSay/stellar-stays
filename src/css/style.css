@@ -42,7 +42,8 @@
 40. toTop Button style
 41. Overlay Effect Bg Image style
 42. Responsive style
-43. mission card style
+43. Mission card style
+42.Sign up from
 
 ==================================== */
 
@@ -5507,3 +5508,11 @@ blockquote cite:before {
     }
   }
   
+  
+/* ======= Sign up form style ======= */
+  @media (min-width: 992px) {
+    .form2-sidebar {
+      width: 50%; /* Half the screen on large screens */
+      margin: 0 auto;
+    }
+  }
