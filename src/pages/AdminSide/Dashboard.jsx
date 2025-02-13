@@ -1,7 +1,10 @@
 import React from 'react';
+import Sidebar from './Sidebar';
 
 const Dashboard = () => {
   return (
+    <div>
+      <Sidebar />
     <div className="dashboard-container">
       <h2>Welcome to the Admin Dashboard</h2>
       <p>This is where you can view key metrics like Revenue, Occupancy Rates, and more.</p>
@@ -21,6 +24,7 @@ const Dashboard = () => {
           <p>4.5/5</p>
         </div>
       </div>
+    </div>
     </div>
   );
 };
