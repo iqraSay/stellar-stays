@@ -37,7 +37,7 @@ const Contact = () => {
       <section class="contact section-padding">
         <div class="container">
           <div class="row">
-            <div class="col-lg-7 col-md-12">
+            <div class="col-lg-6 col-md-12">
               <div class="row mb-30">
                 <div class="col-lg-6 col-md-12 mb-25">
                   <div class="item">
@@ -89,7 +89,7 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 offset-lg-1 col-md-12">
+            <div class="col-lg-6  col-md-12">
               <div class="form2-sidebar mt--240">
                 <form action="#" class="form2">
                   <div class="head">
