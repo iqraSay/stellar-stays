@@ -35,93 +35,6 @@ const EventVenue = () => {
       {/* Event Venues Section */}
       <section className="event-venue">
         <div className="container">
-          {/* Banquet Hall Section */}
-          <div className="row justify-content-center align-items-center mb-5">
-            <div className="col-lg-6 col-md-12">
-              <img
-                src={bq}
-                className="img-fluid"
-                alt="Banquet Hall"
-                style={{
-                  width: "100%",
-                  height: "auto",
-                  maxHeight: "400px",
-                  objectFit: "cover",
-                  marginBottom: "30px",
-                }}
-              />
-            </div>
-            <div className="col-lg-6 col-md-12">
-              <div className="section-subtitle">Elegant Celebrations</div>
-              <div className="section-title">Banquet Hall</div>
-              <p className="mb-25">
-                Our Banquet Hall is perfect for large events, including
-                corporate events, receptions, and special gatherings.
-              </p>
-              <ul className="list-unstyled list mb-30">
-                <li>
-                  <div className="list-icon">
-                    <i className="fa-regular fa-check"></i>
-                  </div>
-                  <div className="list-text">
-                    <p>Capacity: 200 people</p>
-                  </div>
-                </li>
-                <li>
-                  <div className="list-icon">
-                    <i className="fa-regular fa-check"></i>
-                  </div>
-                  <div className="list-text">
-                    <p>Perfect for weddings & corporate events</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Conference Room Section */}
-          <div className="row justify-content-center align-items-center mb-5">
-            <div className="col-lg-6 col-md-12 order-md-2">
-              <img
-                src={cf}
-                className="img-fluid"
-                alt="Conference Room"
-                style={{
-                  width: "100%",
-                  height: "auto",
-                  maxHeight: "400px",
-                  objectFit: "cover",
-                  marginBottom: "30px",
-                }}
-              />
-            </div>
-            <div className="col-lg-6 col-md-12">
-              <div className="section-subtitle">Professional Meetings</div>
-              <div className="section-title">Conference Room</div>
-              <p className="mb-25">
-                The Conference Room is ideal for meetings, seminars, and
-                presentations with all the modern amenities.
-              </p>
-              <ul className="list-unstyled list mb-30">
-                <li>
-                  <div className="list-icon">
-                    <i className="fa-regular fa-check"></i>
-                  </div>
-                  <div className="list-text">
-                    <p>Capacity: 50 people</p>
-                  </div>
-                </li>
-                <li>
-                  <div className="list-icon">
-                    <i className="fa-regular fa-check"></i>
-                  </div>
-                  <div className="list-text">
-                    <p>Perfect for seminars & meetings</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
 
           {/* Wedding Venue Section */}
           <div className="row justify-content-center align-items-center mb-5">
@@ -166,6 +79,94 @@ const EventVenue = () => {
               </ul>
             </div>
           </div>
+          
+          {/* Conference Room Section */}
+          <div className="row justify-content-center align-items-center mb-5">
+            <div className="col-lg-6 col-md-12 order-md-2">
+              <img
+                src={cf}
+                className="img-fluid"
+                alt="Conference Room"
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  maxHeight: "400px",
+                  objectFit: "cover",
+                  marginBottom: "30px",
+                }}
+              />
+            </div>
+            <div className="col-lg-6 col-md-12">
+              <div className="section-subtitle">Professional Meetings</div>
+              <div className="section-title">Conference Room</div>
+              <p className="mb-25">
+                The Conference Room is ideal for meetings, seminars, and
+                presentations with all the modern amenities.
+              </p>
+              <ul className="list-unstyled list mb-30">
+                <li>
+                  <div className="list-icon">
+                    <i className="fa-regular fa-check"></i>
+                  </div>
+                  <div className="list-text">
+                    <p>Capacity: 50 people</p>
+                  </div>
+                </li>
+                <li>
+                  <div className="list-icon">
+                    <i className="fa-regular fa-check"></i>
+                  </div>
+                  <div className="list-text">
+                    <p>Perfect for seminars & meetings</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          {/* Banquet Hall Section */}
+          <div className="row justify-content-center align-items-center mb-5">
+            <div className="col-lg-6 col-md-12">
+              <img
+                src={bq}
+                className="img-fluid"
+                alt="Banquet Hall"
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  maxHeight: "400px",
+                  objectFit: "cover",
+                  marginBottom: "30px",
+                }}
+              />
+            </div>
+            <div className="col-lg-6 col-md-12">
+              <div className="section-subtitle">Elegant Celebrations</div>
+              <div className="section-title">Banquet Hall</div>
+              <p className="mb-25">
+                Our Banquet Hall is perfect for large events, including
+                corporate events, receptions, and special gatherings.
+              </p>
+              <ul className="list-unstyled list mb-30">
+                <li>
+                  <div className="list-icon">
+                    <i className="fa-regular fa-check"></i>
+                  </div>
+                  <div className="list-text">
+                    <p>Capacity: 200 people</p>
+                  </div>
+                </li>
+                <li>
+                  <div className="list-icon">
+                    <i className="fa-regular fa-check"></i>
+                  </div>
+                  <div className="list-text">
+                    <p>Perfect for weddings & corporate events</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
 
           {/* Exhibition Hall Section */}
           <div className="row justify-content-center align-items-center mb-5">
