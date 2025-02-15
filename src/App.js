@@ -19,6 +19,7 @@ import Amenities from "./pages/UserSide/Amenities";
 import EventVenue from "./pages/UserSide/EventVenue";
 import SignUp from "./pages/UserSide/SignUp";
 import Login from "./pages/UserSide/Login";
+import Reservation from "./pages/UserSide/Reservation";
 
 import Dashboard from "./pages/AdminSide/Dashboard";
 import AdminLogin from "./pages/AdminSide/Login";
@@ -40,6 +41,7 @@ function App() {
         <Route path="/facilities" element={<Facilities />} />
         <Route path="/amenities" element={<Amenities />} />
         <Route path="/eventvenue" element={<EventVenue />} />
+        <Route path="/reservation" element={<Reservation />} />
         <Route path="*" element={<Error />} />
 
         <Route path="/admin/add-admin" element={<AddAdmin />} />

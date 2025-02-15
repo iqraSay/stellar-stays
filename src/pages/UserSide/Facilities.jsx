@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Faq from "../../components/Faq";
+import Booking from "../../components/Booking";
 import bg from "../../assets/FacilitiesBg.jpg";
 import dine from "../../assets/f2.jpg";
 import pool from "../../assets/pool2.jpg";
@@ -19,6 +20,7 @@ const Facilities = () => {
   return (
     <div>
       <Header />
+
       <section
         className="banner-header bg-img bg-fixed"
         data-overlay-dark="5"
@@ -301,6 +303,27 @@ const Facilities = () => {
         </div>
       </section>
       <Faq />
+      {/* Booking form */}
+      <section
+        class="section-padding bg-img bg-fixed"
+        data-overlay-dark="5"
+        style={{
+          backgroundImage: `url(${spa})`,
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="container">
+          <div class="row justify-content-center">
+            <div class="col-md-12 text-center mb-20">
+              <div class="section-subtitle">Hotel Experience</div>
+              <div class="section-title white">Booking Form</div>
+            </div>
+          </div>
+        </div>
+        <Booking />
+      </section>
       <Footer />
     </div>
   );

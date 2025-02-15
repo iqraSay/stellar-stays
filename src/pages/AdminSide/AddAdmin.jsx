@@ -53,7 +53,7 @@ const AddAdmin = () => {
   return (
     <div>
       {/* Header removed, large logo added */}
-      <Sidebar />
+      <Sidebar />  
       <section
         className="banner-header bg-img bg-fixed"
          data-overlay-dark="6"
