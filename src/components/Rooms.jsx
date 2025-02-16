@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { Link } from "react-router-dom";
 import r1 from '../assets/01.jpg'
 import r2 from '../assets/02.jpg'
 import r3 from '../assets/03.jpg'
@@ -66,10 +67,10 @@ const Rooms = () => {
                             <div class="wrap">
                             <div class="cont">
                                     <div class="price">₹2000 / night</div>
-                                    <h3><a href="#">Family Room</a></h3>
+                                    <h3><Link to="/room-type/family">Family Room</Link></h3>
                                     <div class="details"> <i class="fa-solid fa-bed mr-5 gold"></i>4 Bed <i class="fa-solid fa-expand mr-5 gold"></i>350 sqm <i class="fa-solid fa-bath mr-5 gold"></i>2 Bathroom  </div>
                                 </div>
-                                <div class="arrow"> <a href="portfolio-details.html"><span class="fa-solid fa-arrow-right"></span></a> </div>
+                                <div class="arrow"> <Link to="/room-type/family"><span class="fa-solid fa-arrow-right"></span></Link> </div>
                             </div>
                         </div>
                         <div class="item mt-20">
@@ -77,10 +78,10 @@ const Rooms = () => {
                             <div class="wrap">
                             <div class="cont">
                                     <div class="price">₹3500 / night</div>
-                                    <h3><a href="#">Double Room</a></h3>
+                                    <h3><Link to="/room-type/double">Double Room</Link></h3>
                                     <div class="details"> <i class="fa-solid fa-bed mr-5 gold"></i>4 Bed <i class="fa-solid fa-expand mr-5 gold"></i>700 sqm <i class="fa-solid fa-bath mr-5 gold"></i>2 Bathroom  </div>
                                 </div>
-                                <div class="arrow"> <a href="portfolio-details.html"><span class="fa-solid fa-arrow-right"></span></a> </div>
+                                <div class="arrow"> <Link to="/room-type/double"><span class="fa-solid fa-arrow-right"></span></Link> </div>
                             </div>
                         </div>
                         <div class="item mt-20">
@@ -88,10 +89,10 @@ const Rooms = () => {
                             <div class="wrap">
                             <div class="cont">
                                     <div class="price">₹3000 / night</div>
-                                    <h3><a href="#">Superior Room</a></h3>
+                                    <h3><Link to="/room-type/superior">Superior Room</Link></h3>
                                     <div class="details"> <i class="fa-solid fa-bed mr-5 gold"></i>3 Bed <i class="fa-solid fa-expand mr-5 gold"></i>600 sqm <i class="fa-solid fa-bath mr-5 gold"></i>2 Bathroom  </div>
                                 </div>
-                                <div class="arrow"> <a href="portfolio-details.html"><span class="fa-solid fa-arrow-right"></span></a> </div>
+                                <div class="arrow"> <Link to="/room-type/superior"><span class="fa-solid fa-arrow-right"></span></Link> </div>
                             </div>
                         </div>
                         <div class="item mt-20">
@@ -99,10 +100,10 @@ const Rooms = () => {
                             <div class="wrap">
                                 <div class="cont">
                                     <div class="price">₹3500 / night</div>
-                                    <h3><a href="#">Wellness Room</a></h3>
-                                    <div class="details"> <i class="fa-solid fa-bed mr-5 gold"></i>4 Bed <i class="fa-solid fa-expand mr-5 gold"></i>350 sqm <i class="fa-solid fa-mug-saucer mr-5 gold"></i>Breakfast  </div>
+                                    <h3><Link to="/room-type/wellness">Wellness Room</Link></h3>
+                                    <div class="details"> <i class="fa-solid fa-bed mr-5 gold"></i>4 Bed <i class="fa-solid fa-expand mr-5 gold"></i>550 sqm <i class="fa-solid fa-bath mr-5 gold"></i>2  Bathroom </div>
                                 </div>
-                                <div class="arrow"> <a href="portfolio-details.html"><i class="fa-solid fa-arrow-right"></i></a> </div>
+                                <div class="arrow"> <Link to="/room-type/wellness"><i class="fa-solid fa-arrow-right"></i></Link> </div>
                             </div>
                         </div>
                         <div class="item mt-20">
@@ -110,10 +111,10 @@ const Rooms = () => {
                             <div class="wrap">
                                 <div class="cont">
                                     <div class="price">₹4000 / night</div>
-                                    <h3><a href="#">King Room</a></h3>
-                                    <div class="details"> <i class="fa-solid fa-bed mr-5 gold"></i>4 Bed <i class="fa-solid fa-expand mr-5 gold"></i>400 Sqm <i class="fa-solid fa-bath mr-5  gold "></i>2 Bathroom </div>
+                                    <h3><Link to="/room-type/king">King Room</Link></h3>
+                                    <div class="details"> <i class="fa-solid fa-bed mr-5 gold"></i>1 Bed <i class="fa-solid fa-expand mr-5 gold"></i>400 Sqm <i class="fa-solid fa-bath mr-5  gold "></i>1 Bathroom </div>
                                 </div>
-                                <div class="arrow"> <a href="portfolio-details.html"><i class="fa-solid fa-arrow-right"></i></a> </div>
+                                <div class="arrow"> <Link to="/room-type/king"><i class="fa-solid fa-arrow-right"></i></Link> </div>
                             </div>
                         </div>
                     </div>
