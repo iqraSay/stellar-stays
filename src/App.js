@@ -20,6 +20,12 @@ import EventVenue from "./pages/UserSide/EventVenue";
 import SignUp from "./pages/UserSide/SignUp";
 import Login from "./pages/UserSide/Login";
 import Reservation from "./pages/UserSide/Reservation";
+import King from "./pages/UserSide/King";
+import Family from './pages/UserSide/Family'
+import Double from "./pages/UserSide/Double";
+import Deluxe from "./pages/UserSide/Deluxe";
+import Wellness from "./pages/UserSide/Wellness";
+import Superior from "./pages/UserSide/Superior";
 
 import Dashboard from "./pages/AdminSide/Dashboard";
 import AdminLogin from "./pages/AdminSide/Login";
@@ -42,6 +48,12 @@ function App() {
         <Route path="/amenities" element={<Amenities />} />
         <Route path="/eventvenue" element={<EventVenue />} />
         <Route path="/reservation" element={<Reservation />} />
+        <Route path="/room-type/family" element={<Family />} />
+        <Route path="/room-type/deluxe" element={<Deluxe />} />
+        <Route path="/room-type/superior" element={<Superior />} />
+        <Route path="/room-type/king" element={<King />} />
+        <Route path="/room-type/wellness" element={<Wellness />} />
+        <Route path="/room-type/double" element={<Double />} />
         <Route path="*" element={<Error />} />
 
         <Route path="/admin/add-admin" element={<AddAdmin />} />

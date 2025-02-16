@@ -56,7 +56,7 @@ const Rooms = () => {
                       ₹1500 <span>/ night</span>
                     </div>
                     <h3>
-                      <Link to="#">Deluxe Room</Link>
+                      <Link to="/room-type/deluxe">Deluxe Room</Link>
                     </h3>
                     <div class="details">
                       {" "}
@@ -67,7 +67,7 @@ const Rooms = () => {
                   </div>
                   <div class="arrow">
                     {" "}
-                    <Link href="#">
+                    <Link to="/room-type/deluxe">
                       <i class="fa-solid fa-arrow-right"></i>
                     </Link>{" "}
                   </div>
@@ -84,7 +84,7 @@ const Rooms = () => {
                   <div class="cont">
                     <div class="price">₹2000 / night</div>
                     <h3>
-                      <Link href="#">Family Room</Link>
+                      <Link to="/room-type/family">Family Room</Link>
                     </h3>
                     <div class="details">
                       {" "}
@@ -95,7 +95,7 @@ const Rooms = () => {
                   </div>
                   <div class="arrow">
                     {" "}
-                    <Link href="#">
+                    <Link to="/room-type/family">
                       <i class="fa-solid fa-arrow-right"></i>
                     </Link>{" "}
                   </div>
@@ -112,7 +112,7 @@ const Rooms = () => {
                   <div class="cont">
                     <div class="price">₹3500 / night</div>
                     <h3>
-                      <a href="#">Double Room</a>
+                      <Link to="/room-type/double">Double Room</Link>
                     </h3>
                     <div class="details">
                       {" "}
@@ -123,7 +123,7 @@ const Rooms = () => {
                   </div>
                   <div class="arrow">
                     {" "}
-                    <Link href="#">
+                    <Link to="/room-type/double">
                       <i class="fa-solid fa-arrow-right"></i>
                     </Link>{" "}
                   </div>
@@ -141,12 +141,12 @@ const Rooms = () => {
                 <div class="wrap">
                 <div class="cont">
                                     <div class="price">₹3000 / night</div>
-                                    <h3><a href="#">Superior Room</a></h3>
+                                    <h3><Link to="/room-type/superior">Superior Room</Link></h3>
                                     <div class="details"> <i class="fa-solid fa-bed mr-5 gold"></i>3 Bed <i class="fa-solid fa-expand mr-5 gold"></i>600 sqm <i class="fa-solid fa-bath mr-5 gold"></i>2 Bathroom  </div>
                                 </div>
                   <div class="arrow">
                     {" "}
-                    <Link href="#">
+                    <Link to="/room-type/superior">
                       <i class="fa-solid fa-arrow-right"></i>
                     </Link>{" "}
                   </div>
@@ -164,13 +164,13 @@ const Rooms = () => {
                 <div class="wrap">
                 <div class="cont">
                                     <div class="price">₹3500 / night</div>
-                                    <h3><a href="#">Wellness Room</a></h3>
-                                    <div class="details"> <i class="fa-solid fa-bed mr-5 gold"></i>4 Bed <i class="fa-solid fa-expand mr-5 gold"></i>350 sqm <i class="fa-solid fa-mug-saucer mr-5 gold"></i>Breakfast  </div>
+                                    <h3><Link to="/room-type/wellness">Wellness Room</Link></h3>
+                                    <div class="details"> <i class="fa-solid fa-bed mr-5 gold"></i>4 Bed <i class="fa-solid fa-expand mr-5 gold"></i>550 sqm <i class="fa-solid fa-bath mr-5 gold"></i>2 Bathroom  </div>
                                 
                   </div>
                   <div class="arrow">
                     {" "}
-                    <Link href="#">
+                    <Link to="/room-type/wellness">
                       <i class="fa-solid fa-arrow-right"></i>
                     </Link>{" "}
                   </div>
@@ -186,12 +186,12 @@ const Rooms = () => {
                 <div class="wrap">
                 <div class="cont">
                                     <div class="price">₹4000 / night</div>
-                                    <h3><a href="#">King Room</a></h3>
-                                    <div class="details"> <i class="fa-solid fa-bed mr-5 gold"></i>4 Bed <i class="fa-solid fa-expand mr-5 gold"></i>400 Sqm <i class="fa-solid fa-bath mr-5  gold "></i>2 Bathroom </div>
+                                    <h3><Link to="/room-type/king">King Room</Link></h3>
+                                    <div class="details"> <i class="fa-solid fa-bed mr-5 gold"></i>1 Bed <i class="fa-solid fa-expand mr-5 gold"></i>400 Sqm <i class="fa-solid fa-bath mr-5  gold "></i>1 Bathroom </div>
                                 </div>
                   <div class="arrow">
                     {" "}
-                    <Link href="#">
+                    <Link to="/room-type/king">
                       <i class="fa-solid fa-arrow-right"></i>
                     </Link>{" "}
                   </div>
