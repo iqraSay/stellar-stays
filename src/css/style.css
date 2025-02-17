@@ -45,12 +45,12 @@
 43. Mission card style
 42.Sign up from style
 43.Admin sidebar style
-44. Reservation form style
-45. Room management style
+44. Room management style
+45. Reservation form style
 ==================================== */
+/* ======= Preloader style ======= */
 
 
-/* ======= Typography style ======= */
 html,
 body {
     -moz-osx-font-smoothing: grayscale;
@@ -5783,3 +5783,149 @@ blockquote cite:before {
     background-color: #fff;
     color: #101010;
 }
+
+/* ======= Reservation form style  ======= */
+/* General Styles */
+.res-banner-header {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50%;
+  }
+  
+  .res-logo {
+    max-width: 250px;
+    margin-top: 50px;
+  }
+  
+  .res-subtitle {
+    font-size: 18px;
+    color: #fff;
+  }
+  
+  .res-title {
+    font-size: 32px;
+    color: #fff;
+    margin-top: 10px;
+  }
+  
+  /* Form Container */
+  .res-form2-sidebar {
+    position: relative;
+    z-index: 9;
+    top:-100px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    margin: 0 auto;
+  }
+  
+  /* Form Elements */
+  .res-form-select,
+  .res-form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    color: #999;
+    background-color: transparent;
+  }
+  
+  .res-form-select {
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2010%2010%22%3E%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23333%22%20stroke-width%3D%221.5%22%20d%3D%22M1%202l4%204-4%204%22%3E%3C/path%3E%3C/svg%3E');
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+    background-size: 12px;
+    padding-right: 35px;
+  }
+  
+  /* Amenities and Event Venues Grid */
+  .res-amenities-grid,
+  .res-event-venues-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .res-amenity-item,
+  .res-event-venue-item {
+    flex: 1 1 30%;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Total Price and Stay Duration */
+  .res-total-price,
+  .res-stay-duration {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  
+  /* Error Message */
+  .res-error-message {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  /* Submit Button */
+  .res-submit-button {
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    background: #E2CC80;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 400;
+    transition: background 0.3s ease;
+  }
+  
+  .res-submit-button:hover {
+    background: #d4b96a;
+  }
+  
+  /* ======= Form style ======= */
+  .res-form2 {
+    border-radius: 5px;
+  }
+  
+  .res-form2 .res-head {
+    background-color: #E2CC80;
+    border-radius: 5px 5px 0 0;
+    padding: 30px;
+  }
+  
+  .res-form2 .res-head h5 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 0;
+  }
+  
+  .res-form2 .res-cont {
+    padding: 30px;
+    background: #1b1b1b;
+    border-radius: 0 0 5px 5px;
+  }
+  
+  /* Contact Section Styles */
+  .res-contact {
+    position: relative;
+    position: -webkit-sticky;
+  }
+  
+  /* Map Styles */
+  .res-map {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    z-index: 9999;
+    border-radius: 5px;
+  }
