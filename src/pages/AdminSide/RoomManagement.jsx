@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { db } from "../../firebase"; // Firebase configuration file
-import { collection, doc, getDocs, deleteDoc, updateDoc } from "firebase/firestore";
+import { collection, doc, getDocs, deleteDoc, updateDoc, addDoc } from "firebase/firestore";
 import Sidebar from './Sidebar';
 import "../../css/style.css";
 
@@ -9,8 +9,14 @@ const RoomManagement = () => {
     const [selectedRoomType, setSelectedRoomType] = useState("");
     const [rooms, setRooms] = useState([]);
     const [showEditModal, setShowEditModal] = useState(false);
+    const [showAddModal, setShowAddModal] = useState(false);
     const [selectedRoom, setSelectedRoom] = useState(null);
     const [newStatus, setNewStatus] = useState("");
+    const [newRoom, setNewRoom] = useState({
+        Room_no: "",
+        Floor: "",
+        Status: false, // Default status is false (Occupied)
+    });
 
     // Fetch Room Types with Name
     useEffect(() => {
@@ -64,13 +70,13 @@ const RoomManagement = () => {
     // Handle Update Room Status
     const handleUpdateStatus = async (e) => {
         e.preventDefault();
-        
+
         const statusBoolean = newStatus === "True"; // Convert to boolean
-        
+
         await updateDoc(doc(db, "RoomTypes", selectedRoomType, "Rooms", selectedRoom.id), {
             Status: statusBoolean,
         });
-    
+
         setShowEditModal(false);
         setRooms(
             rooms.map((room) =>
@@ -78,7 +84,40 @@ const RoomManagement = () => {
             )
         );
     };
-    
+
+    // Handle Add Room (Open Modal)
+    const handleAddRoom = () => {
+        setNewRoom({
+            Room_no: "",
+            Floor: "",
+            Status: false,
+        });
+        setShowAddModal(true);
+    };
+
+    // Handle Save New Room
+    const handleSaveNewRoom = async (e) => {
+        e.preventDefault();
+
+        // Add new room to the selected room type's "Rooms" subcollection
+        await addDoc(collection(db, "RoomTypes", selectedRoomType, "Rooms"), {
+            Room_no: newRoom.Room_no,
+            Floor: newRoom.Floor,
+            Status: newRoom.Status,
+        });
+
+        // Refresh the rooms list
+        const roomsCollection = collection(db, "RoomTypes", selectedRoomType, "Rooms");
+        const querySnapshot = await getDocs(roomsCollection);
+        const roomsData = querySnapshot.docs.map((doc) => ({
+            id: doc.id,
+            ...doc.data(),
+        }));
+        setRooms(roomsData);
+
+        setShowAddModal(false);
+    };
+
     return (
         <div className="room-management-container">
             <Sidebar />
@@ -100,7 +139,12 @@ const RoomManagement = () => {
                         </option>
                     ))}
                 </select>
+            {/* Add Room Button */}
+            <button className="modal-button ml-30" onClick={handleAddRoom}>
+                Add New Room
+            </button>
             </div>
+
 
             <table className="rooms-table">
                 <thead>
@@ -126,7 +170,7 @@ const RoomManagement = () => {
                                 </button>
                                 <button
                                     className="delete-button"
-                                    onClick={() => handleDeleteRoom(room.Room_no)}
+                                    onClick={() => handleDeleteRoom(room.id)}
                                 >
                                     Delete
                                 </button>
@@ -159,6 +203,67 @@ const RoomManagement = () => {
                             </select>
                             <button type="submit" className="update-button">
                                 Update
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            )}
+
+            {/* Add Room Modal */}
+            {showAddModal && (
+                <div className="modal-overlay">
+                    <div className="modal-content">
+                        <span className="close-modal" onClick={() => setShowAddModal(false)}>
+                            &times;
+                        </span>
+                        <h2 className="modal-heading">Add New Room</h2>
+                        <form className="edit-form" onSubmit={handleSaveNewRoom}>
+                            <label className="form-label" htmlFor="room-number">
+                                Room Number:
+                            </label>
+                            <input
+                                className="form-input"
+                                type="text"
+                                id="room-number"
+                                value={newRoom.Room_no}
+                                onChange={(e) =>
+                                    setNewRoom({ ...newRoom, Room_no: e.target.value })
+                                }
+                            />
+
+                            <label className="form-label" htmlFor="floor">
+                                Floor:
+                            </label>
+                            <input
+                                className="form-input"
+                                type="text"
+                                id="floor"
+                                value={newRoom.Floor}
+                                onChange={(e) =>
+                                    setNewRoom({ ...newRoom, Floor: e.target.value })
+                                }
+                            />
+
+                            <label className="form-label" htmlFor="status">
+                                Status:
+                            </label>
+                            <select
+                                className="form-select"
+                                id="status"
+                                value={newRoom.Status ? "True" : "False"}
+                                onChange={(e) =>
+                                    setNewRoom({
+                                        ...newRoom,
+                                        Status: e.target.value === "True",
+                                    })
+                                }
+                            >
+                                <option value="True">Available</option>
+                                <option value="False">Occupied</option>
+                            </select>
+
+                            <button type="submit" className="update-button">
+                                Save
                             </button>
                         </form>
                     </div>
