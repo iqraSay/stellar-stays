@@ -5894,6 +5894,16 @@ blockquote cite:before {
     background: #d4b96a;
   }
   
+  .cancel-button {
+    background-color: #ff4d4d;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+  
   /* ======= Form style ======= */
   .res-form2 {
     border-radius: 5px;
