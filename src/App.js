@@ -30,6 +30,7 @@ import Superior from "./pages/UserSide/Superior";
 import Dashboard from "./pages/AdminSide/Dashboard";
 import AdminLogin from "./pages/AdminSide/Login";
 import AddAdmin from "./pages/AdminSide/AddAdmin";
+import RoomManagement from "./pages/AdminSide/RoomManagement";
 
 
 function App() {
@@ -58,8 +59,8 @@ function App() {
 
         <Route path="/admin/add-admin" element={<AddAdmin />} />
           <Route path="/admin/dashboard" element={<Dashboard />} />
-          {/* <Route path="/admin/rooms" element={<RoomManagement />} />
-          <Route path="/admin/reservations" element={<ReservationManagement />} />
+          <Route path="/admin/rooms" element={<RoomManagement />} />
+          {/* <Route path="/admin/reservations" element={<ReservationManagement />} />
           <Route path="/admin/reports" element={<RevenueReports />} />
           <Route path="/admin/customers" element={<CustomerManagement />} />
           <Route path="/admin/admins" element={<AdminManagement />} />

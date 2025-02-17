@@ -46,6 +46,7 @@
 42.Sign up from style
 43.Admin sidebar style
 44. Reservation form style
+45. Room management style
 ==================================== */
 
 
@@ -5523,13 +5524,13 @@ blockquote cite:before {
 /* Sidebar styling */
 /* Sidebar styling */
 .sidebar {
-    width: 250px;
+    width: 350px;
     height: 100vh;
     background-color: #2C2C2C;
     color: #fff;
     position: fixed;
     top: 0;
-    left: -250px; /* Initially hidden off-screen */
+    left: -350px; /* Initially hidden off-screen */
     transition: left 0.3s ease; /* Transition effect for sliding in */
     padding: 20px;
     display: flex;
@@ -5560,13 +5561,10 @@ blockquote cite:before {
 }
 
 .sidebar-links li {
-    margin: 15px 0;
-}
-
-.sidebar-links a {
+    margin: 10px 0;
     color: #E2CC80;
     font-family: "Urbanist", sans-serif;
-    font-size: 18px;
+    font-size: 17px;
     text-decoration: none;
     display: block;
     padding: 10px;
@@ -5575,7 +5573,7 @@ blockquote cite:before {
     transition: background-color 0.3s ease;
 }
 
-.sidebar-links a:hover {
+.sidebar-links li:hover {
     background-color: #444;
     border-radius: 5px;
 }
@@ -5626,3 +5624,139 @@ blockquote cite:before {
     opacity: 1;
 }
 
+/* ========Room management style====== */
+
+/* General Styles */
+.room-management-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #1b1b1b;
+    color: #fff;
+    font-family: 'Gilda Display', serif;
+}
+
+.room-management-heading {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #E2CC80;
+}
+
+.room-type-selector {
+    margin-bottom: 20px;
+}
+
+.room-type-label {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.room-type-select {
+    padding: 8px;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #555;
+}
+
+/* Table Styles */
+.rooms-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table-header {
+    background-color: #E2CC80;
+    color: #1b1b1b;
+    padding: 12px;
+    text-align: left;
+}
+
+.table-row {
+    border-bottom: 1px solid #555;
+}
+
+.table-data {
+    padding: 12px;
+    text-align: left;
+}
+
+/* Button Styles */
+.edit-button {
+    background-color: #E2CC80;
+    color: #1b1b1b;
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.delete-button {
+    background-color: #ff4d4d;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #1b1b1b;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+.close-modal {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.modal-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-label {
+    font-size: 18px;
+}
+
+.form-select {
+    padding: 8px;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #555;
+}
+
+.update-button {
+    background-color: #E2CC80;
+    color: #1b1b1b;
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
