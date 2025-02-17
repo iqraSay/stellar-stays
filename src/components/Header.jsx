@@ -1,23 +1,54 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { auth } from "../firebase";
+import { signOut } from "firebase/auth";
 import "../css/style.css";
 import logo from "../assets/logo.png";
 
 const Header = () => {
+  const [user, setUser] = useState(null); // State to store the logged-in user
+  const navigate = useNavigate();
+
+  // Listen for authentication state changes
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) {
+        // User is signed in
+        setUser(user);
+      } else {
+        // User is signed out
+        setUser(null);
+      }
+    });
+
+    // Cleanup subscription on unmount
+    return () => unsubscribe();
+  }, []);
+
+  // Handle logout
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
+      navigate("/"); // Redirect to home page after logout
+    } catch (error) {
+      console.error("Error logging out: ", error);
+    }
+  };
+
   return (
     <div>
-      <nav class="navbar navbar-expand-lg">
-        <div class="container">
+      <nav className="navbar navbar-expand-lg">
+        <div className="container">
           {/* <!-- Logo --> */}
-          <div class="logo-wrapper">
-            <Link class="logo" to="/">
+          <div className="logo-wrapper">
+            <Link className="logo" to="/">
               {" "}
-              <img src={logo} class="logo-img" alt="" />{" "}
+              <img src={logo} className="logo-img" alt="" />{" "}
             </Link>
           </div>
           {/* <!-- Button --> */}
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbar"
@@ -26,105 +57,89 @@ const Header = () => {
             aria-label="Toggle navigation"
           >
             {" "}
-            <span class="navbar-toggler-icon">
-              <i class="fa-solid fa-bars"></i>
+            <span className="navbar-toggler-icon">
+              <i className="fa-solid fa-bars"></i>
             </span>{" "}
           </button>
           {/* <!-- Menu --> */}
-          <div class="collapse navbar-collapse" id="navbar">
-            <ul class="navbar-nav mx-auto">
-              <li class="nav-item dropdown">
+          <div className="collapse navbar-collapse" id="navbar">
+            <ul className="navbar-nav mx-auto">
+              <li className="nav-item dropdown">
                 {" "}
-                <Link to="/" class="nav-link active" role="button">
+                <Link to="/" className="nav-link active" role="button">
                   Home{" "}
                 </Link>
-                {/* <ul class="dropdown-menu">
-                        <li><a to="/" class="dropdown-item active"><span>Home Image</span></a></li>
-                        <li><a to="/" class="dropdown-item"><span>Home Slider</span></a></li>
-                        <li><a to="/" class="dropdown-item"><span>Home Video</span></a></li>
-                        <li><a to="/" class="dropdown-item"><span>Home Slideshow</span></a></li>
-                    </ul> */}
               </li>
-              <li class="nav-item">
-                <Link class="nav-link" to="/about">
+              <li className="nav-item">
+                <Link className="nav-link" to="/about">
                   About
                 </Link>
               </li>
-              <li class="nav-item">
-                <Link
-                  class="nav-link "
-                  to="/rooms"
-                >
+              <li className="nav-item">
+                <Link className="nav-link" to="/rooms">
                   Rooms
                 </Link>
-                {/* <ul class="dropdown-menu">
-                        <li><Link to="/" class="dropdown-item"><span>Rooms 01</span></Link></li>
-                        <li><Link to="/" class="dropdown-item"><span>Rooms 02</span></Link></li>
-                        <li class="dropdown-submenu dropdown"> <Link class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false" to="#"><span>Room Details <i class="fa-solid fa-angle-right"></i></span></Link>
-                            <ul class="dropdown-menu">
-                                <li><Link to="room-details1.html" class="dropdown-item"><span>Details 01</span></Link></li>
-                                <li><Link to="room-details2.html" class="dropdown-item"><span>Details 02</span></Link></li>
-                                <li><Link to="room-details3.html" class="dropdown-item"><span>Details 03</span></Link></li>
-                                <li><Link to="room-details4.html" class="dropdown-item"><span>Details 04</span></Link></li>
-                            </ul>
-                        </li>
-                    </ul> */}
               </li>
-              <li class="nav-item dropdown">
+              <li className="nav-item dropdown">
                 {" "}
                 <Link
-                  class="nav-link dropdown-toggle"
+                  className="nav-link dropdown-toggle"
                   to="#"
                   role="button"
                   data-bs-toggle="dropdown"
                   data-bs-auto-close="outside"
                   aria-expanded="false"
                 >
-                  Services <i class="fa-solid fa-angle-down"></i>
+                  Services <i className="fa-solid fa-angle-down"></i>
                 </Link>
-                <ul class="dropdown-menu">
+                <ul className="dropdown-menu">
                   <li>
-                    <Link to="/facilities" class="dropdown-item">
+                    <Link to="/facilities" className="dropdown-item">
                       <span>Facilities</span>
                     </Link>
                   </li>
-
                   <li>
-                    <Link to="/amenities" class="dropdown-item">
+                    <Link to="/amenities" className="dropdown-item">
                       <span>Amenities</span>
                     </Link>
                   </li>
                   <li>
-                    <Link to="/eventvenue" class="dropdown-item">
+                    <Link to="/eventvenue" className="dropdown-item">
                       <span>Event Venues</span>
                     </Link>
                   </li>
                 </ul>
               </li>
-              {/* <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Pages <i class="fa-solid fa-angle-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a to="restaurant.html" class="dropdown-item"><span>Restaurant</span></a></li>
-                        <li><a to="spa.html" class="dropdown-item"><span>Spa & Wellness</span></a></li>
-                        <li><a to="pricing.html" class="dropdown-item"><span>Pricing</span></a></li>
-                        <li><a to="team.html" class="dropdown-item"><span>Team</span></a></li>
-                        <li><a to="team-single.html" class="dropdown-item"><span>Team Single</span></a></li>
-                        <li><a to="faq.html" class="dropdown-item"><span>FAQs</span></a></li>
-                        <li><a to="gallery-image.html" class="dropdown-item"><span>Image Gallery</span></a></li>
-                        <li><a to="gallery-video.html" class="dropdown-item"><span>Video Gallery</span></a></li>
-                        <li><a to="404.html" class="dropdown-item"><span>404 Page</span></a></li>
-                    </ul>
-                </li> */}
-              <li class="nav-item">
-                <Link class="nav-link" to="/contact">
+              <li className="nav-item">
+                <Link className="nav-link" to="/contact">
                   Contact
                 </Link>
               </li>
             </ul>
-            <div class="navbar-right">
-              <div class="phonex">
-                <Link to="tel:+12345678910">
-                  <i class="fa-solid fa-phone"></i> +1 234 567 8910
-                </Link>
+            <div className="navbar-right">
+              <div className="phonex">
+                {user ? (
+                  <>
+                    <span style={{ marginRight: "10px", color: "#fff" }}>
+                      Welcome, {user.displayName || user.email}
+                    </span>
+                    <button
+                      onClick={handleLogout}
+                      style={{
+                        background: "none",
+                        border: "none",
+                        color: "#fff",
+                        cursor: "pointer",
+                      }}
+                    >
+                      <i className="fa-solid fa-sign-out"></i> Logout
+                    </button>
+                  </>
+                ) : (
+                  <Link to="/login">
+                    <i className="fa-solid fa-user"></i> Login
+                  </Link>
+                )}
               </div>
             </div>
           </div>

@@ -1178,6 +1178,30 @@ blockquote cite:before {
 .nav-scroll .navbar-nav .active {
     color: #E2CC80 !important;
 }
+
+/* User Name and Logout Button Styles */
+.navbar-right .phonex {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-right .phonex span {
+    margin-right: 10px;
+    color: #fff;
+  }
+  
+  .navbar-right .phonex button {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .navbar-right .phonex button:hover {
+    color: #E2CC80;
+  }
+
 /* logo */
 .nav-scroll .logo-wrapper .logo-img {
     width: 130px;
@@ -5548,7 +5572,8 @@ blockquote cite:before {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 20px; 
+    
 }
 
 .logo {
@@ -5578,6 +5603,22 @@ blockquote cite:before {
     background-color: #444;
     border-radius: 5px;
 }
+
+  
+  .sidebar-header .logo {
+    max-width: 100px;
+    margin-bottom: 10px;
+  }
+  
+  /* Welcome Message */
+  .welcome-message {
+    color: #fff;
+    font-size: 16px;
+    margin-top: 10px;
+    
+    border-bottom: 1px solid #444;
+    font-family: "Urbanist", sans-serif;
+  }
 
 /* Hamburger Menu */
 .hamburger {
