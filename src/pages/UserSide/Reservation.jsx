@@ -19,7 +19,8 @@ const Reservation = () => {
   const [roomPrice, setRoomPrice] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
   const [selectedAmenities, setSelectedAmenities] = useState([]);
-  const [selectedEventVenue, setSelectedEventVenue] = useState("");
+  const [selectedEventVenue, setSelectedEventVenue] = useState([]);
+  const [selectedEventVenues, setSelectedEventVenues] = useState([]);
   const [stayDuration, setStayDuration] = useState(0);
   const navigate = useNavigate();
 
@@ -95,8 +96,14 @@ const Reservation = () => {
 
   // Handle event venue selection
   const handleEventVenueChange = (venue) => {
-    setSelectedEventVenue(venue.name);
-    setTotalPrice(totalPrice + venue.price);
+    const isSelected = selectedEventVenues.includes(venue.name);
+    if (isSelected) {
+      setSelectedEventVenues(selectedEventVenues.filter(item => item !== venue.name));
+      setTotalPrice(totalPrice - venue.price);
+    } else {
+      setSelectedEventVenues([...selectedEventVenues, venue.name]);
+      setTotalPrice(totalPrice + venue.price);
+    }
   };
 
   // Handle reservation submission
@@ -129,7 +136,19 @@ const Reservation = () => {
       });
 
       // Redirect to payment page
-      navigate("/payment", { state: { totalPrice } });
+      navigate("/payment", {
+        state: {
+          totalPrice,
+          reservationDetails: {
+            Reservation_id: reservationIdString,
+            Room_type: selectedRoomType,
+            Check_in: checkIn,
+            Check_out: checkOut,
+            Amenities: selectedAmenities.join(", "),
+            Event_venue: selectedEventVenue, // Ensure this is passed correctly
+          },
+        },
+      });
     } catch (error) {
       setError("Error making reservation: " + error.message);
     }
@@ -270,9 +289,8 @@ const Reservation = () => {
                           {eventVenues.map((venue, index) => (
                             <div key={index} className="res-event-venue-item">
                               <input
-                                type="radio"
+                                type="checkbox"
                                 id={`venue-${index}`}
-                                name="event-venue"
                                 value={venue.name}
                                 onChange={() => handleEventVenueChange(venue)}
                               />
@@ -306,7 +324,7 @@ const Reservation = () => {
                           type="submit"
                           className="res-submit-button"
                         >
-                           Proceed to pay
+                          Proceed to pay
                         </button>
                       </div>
                     </div>
