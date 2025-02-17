@@ -26,6 +26,7 @@ import Double from "./pages/UserSide/Double";
 import Deluxe from "./pages/UserSide/Deluxe";
 import Wellness from "./pages/UserSide/Wellness";
 import Superior from "./pages/UserSide/Superior";
+import Payment from "./pages/UserSide/Payment";
 
 import Dashboard from "./pages/AdminSide/Dashboard";
 import AdminLogin from "./pages/AdminSide/Login";
@@ -52,6 +53,7 @@ function App() {
         <Route path="/amenities" element={<Amenities />} />
         <Route path="/eventvenue" element={<EventVenue />} />
         <Route path="/reservation" element={<Reservation />} />
+        <Route path="/payment" element={<Payment />} />
         <Route path="/room-type/family" element={<Family />} />
         <Route path="/room-type/deluxe" element={<Deluxe />} />
         <Route path="/room-type/superior" element={<Superior />} />
