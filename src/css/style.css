@@ -5703,6 +5703,7 @@ blockquote cite:before {
 }
 
 /* Modal Styles */
+/* Modal Overlay */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -5713,27 +5714,28 @@ blockquote cite:before {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-y: auto; /* Make modal scrollable */
 }
 
+/* Modal Content */
 .modal-content {
     background-color: #1b1b1b;
     padding: 20px;
     border-radius: 10px;
-    width: 300px;
-    text-align: center;
+    width: 90%; /* Full width on mobile */
+    max-width: 70%; /* 70% width on larger screens */
+    max-height: 90vh; /* Limit height to 90% of viewport */
+    overflow-y: auto; /* Make content scrollable */
 }
 
+/* Close Modal Button */
 .close-modal {
     float: right;
     font-size: 24px;
     cursor: pointer;
 }
 
-.modal-heading {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
+/* Form Styles */
 .edit-form {
     display: flex;
     flex-direction: column;
@@ -5742,9 +5744,10 @@ blockquote cite:before {
 
 .form-label {
     font-size: 18px;
+    text-align: left;
 }
 
-.form-select {
+.form-input {
     padding: 8px;
     border-radius: 5px;
     background-color: #333;
@@ -5759,4 +5762,24 @@ blockquote cite:before {
     border-radius: 5px;
     border: none;
     cursor: pointer;
+}
+
+.modal-button{
+    background-color: #E2CC80;
+    height: auto;
+    padding: 22px 27px;
+    border: none;
+    background-color: #E2CC80;
+    color: #fff;
+    line-height: 20px;
+    font-weight: 400;
+    text-align: center;
+    font-size: 17px;
+    border-radius: 50px;
+}
+
+.modal-button:hover {
+    border: none;
+    background-color: #fff;
+    color: #101010;
 }

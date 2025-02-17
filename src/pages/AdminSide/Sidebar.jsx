@@ -40,7 +40,7 @@ const Sidebar = () => {
         <ul>
           <li><Link to="/admin/dashboard">Dashboard</Link></li>
           <li><Link to="/admin/rooms">Room Management</Link></li>
-          <li><Link to="/admin/room-type-management">Room Type Management</Link></li>
+          <li><Link to="/admin/room-types">Room Type Management</Link></li>
           <li><Link to="/admin/reservation-management">Reservation Management</Link></li>
           <li><Link to="/admin/revenue-reports">Revenue and Reports</Link></li>
           <li><Link to="/admin/customer-management">Customer Management</Link></li>
