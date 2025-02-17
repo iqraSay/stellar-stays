@@ -32,6 +32,8 @@ import AdminLogin from "./pages/AdminSide/Login";
 import AddAdmin from "./pages/AdminSide/AddAdmin";
 import RoomManagement from "./pages/AdminSide/RoomManagement";
 import RoomTypeManagement from "./pages/AdminSide/RoomTypeManagement";
+import UserManagement from "./pages/AdminSide/UserManagement";
+import AdminManagement from "./pages/AdminSide/AdminManagement";
 
 
 function App() {
@@ -62,10 +64,10 @@ function App() {
           <Route path="/admin/dashboard" element={<Dashboard />} />
           <Route path="/admin/rooms" element={<RoomManagement />} />
           <Route path="/admin/room-types" element={<RoomTypeManagement />} />
+          <Route path="/admin/customer-management" element={<UserManagement />} />
+          <Route path="/admin/admin-management" element={<AdminManagement />} />
           {/* <Route path="/admin/reservations" element={<ReservationManagement />} />
           <Route path="/admin/reports" element={<RevenueReports />} />
-          <Route path="/admin/customers" element={<CustomerManagement />} />
-          <Route path="/admin/admins" element={<AdminManagement />} />
           <Route path="/admin/logout" element={<Logout />} /> */}
         </Routes>
       
