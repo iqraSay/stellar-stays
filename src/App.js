@@ -38,6 +38,7 @@ import UserManagement from "./pages/AdminSide/UserManagement";
 import AdminManagement from "./pages/AdminSide/AdminManagement";
 import ReservationManagement from "./pages/AdminSide/ReservationManagement";
 import Feedbacks from "./pages/AdminSide/Feedbacks";
+import Pay
 
 function App() {
   return (
