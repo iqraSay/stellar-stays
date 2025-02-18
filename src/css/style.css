@@ -48,6 +48,7 @@
 44. Room management style
 45. Reservation form style
 46.Invoice Modal Styles
+47.Dashboard Styles
 ==================================== */
 /* ======= Preloader style ======= */
 
@@ -6019,5 +6020,84 @@ blockquote cite:before {
   .res-invoice-details .res-text {
     font-size: 16px;
     color: #999;
+    margin-bottom: 10px;
+  }
+
+/* ======= Dashboard style ======= */
+/* Insights Grid */
+.insights-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  
+  .insight-card {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .insight-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .insight-card h3 {
+    font-size: 18px;
+    color: #E2CC80;
+    margin-bottom: 10px;
+  }
+  
+  .insight-card p {
+    font-size: 24px;
+    color: #fff;
+  }
+  
+  /* Charts Grid */
+  .charts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  
+  .chart-card {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .chart-card h3 {
+    font-size: 18px;
+    color: #E2CC80;
+    margin-bottom: 20px;
+  }
+  
+  /* Alerts Section */
+  .alerts-section {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .alerts-section h3 {
+    font-size: 18px;
+    color: #E2CC80;
+    margin-bottom: 20px;
+  }
+  
+  .alerts-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .alerts-section li {
+    font-size: 16px;
+    color: #fff;
     margin-bottom: 10px;
   }
