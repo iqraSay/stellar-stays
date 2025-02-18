@@ -27,6 +27,7 @@ import Deluxe from "./pages/UserSide/Deluxe";
 import Wellness from "./pages/UserSide/Wellness";
 import Superior from "./pages/UserSide/Superior";
 import Payment from "./pages/UserSide/Payment";
+import Feedback from "./pages/UserSide/Feedback";
 
 import Dashboard from "./pages/AdminSide/Dashboard";
 import AdminLogin from "./pages/AdminSide/Login";
@@ -36,6 +37,7 @@ import RoomTypeManagement from "./pages/AdminSide/RoomTypeManagement";
 import UserManagement from "./pages/AdminSide/UserManagement";
 import AdminManagement from "./pages/AdminSide/AdminManagement";
 import ReservationManagement from "./pages/AdminSide/ReservationManagement";
+import Feedbacks from "./pages/AdminSide/Feedbacks";
 
 
 function App() {
@@ -61,6 +63,7 @@ function App() {
         <Route path="/room-type/king" element={<King />} />
         <Route path="/room-type/wellness" element={<Wellness />} />
         <Route path="/room-type/double" element={<Double />} />
+          <Route path="/feedback" element={<Feedback />} />
         <Route path="*" element={<Error />} />
 
         <Route path="/admin/add-admin" element={<AddAdmin />} />
@@ -70,6 +73,7 @@ function App() {
           <Route path="/admin/customer-management" element={<UserManagement />} />
           <Route path="/admin/admin-management" element={<AdminManagement />} />
           <Route path="/admin/reservation-management" element={<ReservationManagement />} />
+          <Route path="/admin/Feedbacks" element={<Feedbacks />} />
           {/* 
           <Route path="/admin/reports" element={<RevenueReports />} />
           <Route path="/admin/logout" element={<Logout />} />

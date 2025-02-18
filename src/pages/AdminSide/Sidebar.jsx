@@ -77,7 +77,10 @@ const Sidebar = () => {
               <Link to="/admin/reservation-management">Reservation Management</Link>
             </li>
             <li>
-              <Link to="/admin/revenue-reports">Revenue and Reports</Link>
+              <Link to="/admin/feedbacks">Feedbacks Received </Link>
+            </li>
+            <li>
+              <Link to="/admin/payments">Payments Received</Link>
             </li>
             <li>
               <Link to="/admin/customer-management">Customer Management</Link>
