@@ -70,7 +70,10 @@ const AdminDashboard = () => {
   }, []);
 
   // Calculate total revenue
-  const totalRevenue = payments.reduce((sum, payment) => sum + payment.amount_paid, 0);
+  const totalRevenue = payments.reduce((sum, payment) => {
+    const amount = parseFloat(payment.amount_paid);
+    return sum + (isNaN(amount) ? 0 : amount);
+  }, 0);
 
   // Calculate occupancy rate
   const totalRooms = rooms.length;
@@ -84,10 +87,11 @@ const AdminDashboard = () => {
     const nights = (checkOut - checkIn) / (1000 * 60 * 60 * 24);
     return sum + nights;
   }, 0);
-  const ADR = totalRevenue / totalNights || 0;
-
+  
+  const ADR = totalNights > 0 ? totalRevenue / totalNights : 0;
+  
   // Calculate RevPAR
-  const RevPAR = (totalRevenue / totalRooms).toFixed(2);
+const RevPAR = totalRooms > 0 ? totalRevenue / totalRooms : 0;
 
   // Prepare data for charts
   const revenueData = payments.map((payment) => ({
@@ -135,7 +139,7 @@ const AdminDashboard = () => {
         </div>
         <div className="insight-card">
           <h3>RevPAR</h3>
-          <p>₹{RevPAR}</p>
+          <p>₹{RevPAR.toFixed(2)}</p>
         </div>
       </div>
 
