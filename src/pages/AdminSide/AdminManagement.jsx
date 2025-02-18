@@ -141,12 +141,12 @@ const AdminManagement = () => {
                             <td className="table-data">{admin.Email}</td>
                             <td className="table-data">{admin.Phone_no}</td>
                             <td className="table-data">
-                                <button
+                                {/* <button
                                     className="edit-button"
                                     onClick={() => handleEditAdmin(admin)}
                                 >
                                     Edit
-                                </button>
+                                </button> */}
                                 <button
                                     className="delete-button"
                                     onClick={() => handleDeleteAdmin(admin.id)}
