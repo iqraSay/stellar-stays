@@ -10,6 +10,7 @@ import Offers from '../../components/Offers'
 import Rooms from '../../components/Rooms'
 import Amenities from '../../components/Amenities'
 import Pricing from '../../components/Pricing'
+import Testimonials from './Testimonials';
 
 
 const Home = () => {
@@ -25,6 +26,7 @@ const Home = () => {
         <Rooms/>
         <Amenities/>
         <Pricing/>
+        <Testimonials />
         <Footer/>
 
 

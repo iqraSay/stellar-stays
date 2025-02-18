@@ -9,7 +9,7 @@ import "select2/dist/css/select2.min.css"; // Select2
 import "bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css";
 import "vegas/dist/vegas.min.css"; // Vegas Slider
 
-import Error from './components/Error'
+import Error from "./components/Error";
 import Home from "./pages/UserSide/Home";
 import AboutUs from "./pages/UserSide/AboutUs";
 import Contact from "./pages/UserSide/Contact";
@@ -21,7 +21,7 @@ import SignUp from "./pages/UserSide/SignUp";
 import Login from "./pages/UserSide/Login";
 import Reservation from "./pages/UserSide/Reservation";
 import King from "./pages/UserSide/King";
-import Family from './pages/UserSide/Family'
+import Family from "./pages/UserSide/Family";
 import Double from "./pages/UserSide/Double";
 import Deluxe from "./pages/UserSide/Deluxe";
 import Wellness from "./pages/UserSide/Wellness";
@@ -39,7 +39,6 @@ import AdminManagement from "./pages/AdminSide/AdminManagement";
 import ReservationManagement from "./pages/AdminSide/ReservationManagement";
 import Feedbacks from "./pages/AdminSide/Feedbacks";
 
-
 function App() {
   return (
     <div className="App">
@@ -55,31 +54,26 @@ function App() {
         <Route path="/facilities" element={<Facilities />} />
         <Route path="/amenities" element={<Amenities />} />
         <Route path="/eventvenue" element={<EventVenue />} />
-        <Route path="/reservation" element={<Reservation />} />
-        <Route path="/payment" element={<Payment />} />
         <Route path="/room-type/family" element={<Family />} />
         <Route path="/room-type/deluxe" element={<Deluxe />} />
         <Route path="/room-type/superior" element={<Superior />} />
         <Route path="/room-type/king" element={<King />} />
         <Route path="/room-type/wellness" element={<Wellness />} />
         <Route path="/room-type/double" element={<Double />} />
-          <Route path="/feedback" element={<Feedback />} />
+        <Route path="/reservation" element={<Reservation />} />
+        <Route path="/payment" element={<Payment />} />
+        <Route path="/feedback" element={<Feedback />} />
         <Route path="*" element={<Error />} />
 
         <Route path="/admin/add-admin" element={<AddAdmin />} />
-          <Route path="/admin/dashboard" element={<Dashboard />} />
-          <Route path="/admin/rooms" element={<RoomManagement />} />
-          <Route path="/admin/room-types" element={<RoomTypeManagement />} />
-          <Route path="/admin/customer-management" element={<UserManagement />} />
-          <Route path="/admin/admin-management" element={<AdminManagement />} />
-          <Route path="/admin/reservation-management" element={<ReservationManagement />} />
-          <Route path="/admin/Feedbacks" element={<Feedbacks />} />
-          {/* 
-          <Route path="/admin/reports" element={<RevenueReports />} />
-          <Route path="/admin/logout" element={<Logout />} />
-           */}
-        </Routes>
-      
+        <Route path="/admin/dashboard" element={<Dashboard />} />
+        <Route path="/admin/rooms" element={<RoomManagement />} />
+        <Route path="/admin/room-types" element={<RoomTypeManagement />} />
+        <Route path="/admin/customer-management" element={<UserManagement />} />
+        <Route path="/admin/admin-management" element={<AdminManagement />} />
+        <Route path="/admin/reservation-management" element={<ReservationManagement />} />
+        <Route path="/admin/Feedbacks" element={<Feedbacks />} />
+      </Routes>
     </div>
   );
 }
