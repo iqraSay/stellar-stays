@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { db } from "../../firebase";
-import { doc, updateDoc } from "firebase/firestore";
+import { doc, updateDoc, collection, addDoc, getDocs } from "firebase/firestore";
 import Footer from "../../components/Footer";
 import html2pdf from "html2pdf.js";
 import "../../css/style.css";
@@ -21,6 +21,23 @@ const Payment = () => {
       const reservationRef = doc(db, "Reservations", reservationDetails.Reservation_id);
       await updateDoc(reservationRef, {
         Status: "confirmed",
+      });
+
+      // Generate payment details
+      const today = new Date();
+      const paymentDate = `${today.getDate()}/${today.getMonth() + 1}/${today.getFullYear()}`;
+      const paymentsRef = collection(db, "Payments");
+      const querySnapshot = await getDocs(paymentsRef);
+      const serialNumber = querySnapshot.size + 1; // Next serial number
+      const paymentId = `p${serialNumber}${today.getDate()}${today.getMonth() + 1}${today.getFullYear()}`;
+
+      // Save payment details to Firestore
+      await addDoc(paymentsRef, {
+        payment_id: paymentId,
+        reservation_id: reservationDetails.Reservation_id,
+        amount_paid: totalPrice,
+        payment_date: paymentDate,
+        payment_status: "paid",
       });
 
       // Show the invoice
@@ -197,12 +214,12 @@ const Payment = () => {
                 <strong>Total Price:</strong> ₹{totalPrice}
               </p>
             </div>
-            {/* <button
+            <button
               className="res-submit-button"
               onClick={downloadInvoice}
             >
               Download Invoice
-            </button> */}
+            </button>
             <button
               className="res-submit-button"
               onClick={handleRedirect}
