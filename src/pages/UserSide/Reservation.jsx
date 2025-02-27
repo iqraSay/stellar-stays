@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import bg from "../../assets/FormBg2.jpg";
 import Footer from "../../components/Footer";
-import { db } from '../../firebase';
+import { db, auth } from '../../firebase'; // Import auth from Firebase
 import { doc, setDoc, collection, getDocs } from "firebase/firestore";
+import { onAuthStateChanged } from "firebase/auth"; // Import onAuthStateChanged
 import logo from "../../assets/logo.png";
 import "../../css/style.css";
 
@@ -19,10 +20,25 @@ const Reservation = () => {
   const [roomPrice, setRoomPrice] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
   const [selectedAmenities, setSelectedAmenities] = useState([]);
-  const [selectedEventVenue, setSelectedEventVenue] = useState([]);
   const [selectedEventVenues, setSelectedEventVenues] = useState([]);
   const [stayDuration, setStayDuration] = useState(0);
   const navigate = useNavigate();
+
+  // Check if user is logged in
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (!user) {
+        // Redirect to login page if user is not logged in
+        navigate("/login");
+      } else {
+        // If user is logged in, set their email
+        setEmail(user.email || "");
+      }
+    });
+
+    // Cleanup subscription
+    return () => unsubscribe();
+  }, [navigate]);
 
   // Amenities and their prices
   const amenities = [
@@ -115,6 +131,16 @@ const Reservation = () => {
       return;
     }
 
+    // Check if check-in or check-out dates are in the past
+    const today = new Date();
+    const checkInDate = new Date(checkIn);
+    const checkOutDate = new Date(checkOut);
+
+    if (checkInDate < today || checkOutDate < today) {
+      setError("Check-in and check-out dates cannot be in the past.");
+      return;
+    }
+
     try {
       // Generate reservation ID
       const reservationCountDoc = await getDocs(collection(db, "Reservations"));
@@ -132,7 +158,7 @@ const Reservation = () => {
         Check_out: checkOut,
         Total_price: totalPrice,
         Amenities: selectedAmenities.join(", "),
-        Event_venue: selectedEventVenue,
+        Event_venue: selectedEventVenues.join(", "),
       });
 
       // Redirect to payment page
@@ -145,7 +171,7 @@ const Reservation = () => {
             Check_in: checkIn,
             Check_out: checkOut,
             Amenities: selectedAmenities.join(", "),
-            Event_venue: selectedEventVenue, // Ensure this is passed correctly
+            Event_venue: selectedEventVenues.join(", "),
           },
         },
       });
@@ -176,7 +202,7 @@ const Reservation = () => {
       </section>
 
       {/* Reservation Form */}
-      <section className="res-contact ]section-padding">
+      <section className="res-contact section-padding">
         <div className="res-container">
           <div className="res-row res-justify-content-center">
             <div className="res-col-lg-10 res-col-md-12">
@@ -193,7 +219,9 @@ const Reservation = () => {
                     <div className="res-row">
                       {/* Room Type Field */}
                       <div className="res-col-lg-12 res-col-md-12 res-form-group">
+                        <label htmlFor="roomType">Room Type:</label>
                         <select
+                          id="roomType"
                           name="roomType"
                           required
                           value={selectedRoomType}
@@ -211,8 +239,10 @@ const Reservation = () => {
 
                       {/* Email Field */}
                       <div className="res-col-lg-12 res-col-md-12 res-form-group">
+                        <label htmlFor="email">Email:</label>
                         <input
                           type="email"
+                          id="email"
                           placeholder="Email"
                           value={email}
                           onChange={(e) => setEmail(e.target.value)}
@@ -223,8 +253,10 @@ const Reservation = () => {
 
                       {/* Phone Number Field */}
                       <div className="res-col-lg-12 res-col-md-12 res-form-group">
+                        <label htmlFor="phoneNo">Phone Number:</label>
                         <input
                           type="text"
+                          id="phoneNo"
                           placeholder="Phone Number"
                           value={phoneNo}
                           onChange={(e) => setPhoneNo(e.target.value)}
@@ -235,23 +267,29 @@ const Reservation = () => {
 
                       {/* Check-in Date Field */}
                       <div className="res-col-lg-12 res-col-md-12 res-form-group">
+                        <label htmlFor="checkIn">Check-in Date:</label>
                         <input
                           type="date"
+                          id="checkIn"
                           value={checkIn}
                           onChange={(e) => setCheckIn(e.target.value)}
                           required
                           className="res-form-input"
+                          min={new Date().toISOString().split("T")[0]} // Prevent past dates
                         />
                       </div>
 
                       {/* Check-out Date Field */}
                       <div className="res-col-lg-12 res-col-md-12 res-form-group">
+                        <label htmlFor="checkOut">Check-out Date:</label>
                         <input
                           type="date"
+                          id="checkOut"
                           value={checkOut}
                           onChange={(e) => setCheckOut(e.target.value)}
                           required
                           className="res-form-input"
+                          min={checkIn || new Date().toISOString().split("T")[0]} // Prevent past dates
                         />
                       </div>
 
