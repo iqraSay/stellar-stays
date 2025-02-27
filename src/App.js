@@ -38,7 +38,7 @@ import UserManagement from "./pages/AdminSide/UserManagement";
 import AdminManagement from "./pages/AdminSide/AdminManagement";
 import ReservationManagement from "./pages/AdminSide/ReservationManagement";
 import Feedbacks from "./pages/AdminSide/Feedbacks";
-import Pay
+import Payments from "./pages/AdminSide/Payment";
 
 function App() {
   return (
@@ -74,6 +74,7 @@ function App() {
         <Route path="/admin/admin-management" element={<AdminManagement />} />
         <Route path="/admin/reservation-management" element={<ReservationManagement />} />
         <Route path="/admin/Feedbacks" element={<Feedbacks />} />
+        <Route path="/admin/payments" element={<Payments />} />
       </Routes>
     </div>
   );

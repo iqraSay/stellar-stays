@@ -214,12 +214,12 @@ const Payment = () => {
                 <strong>Total Price:</strong> ₹{totalPrice}
               </p>
             </div>
-            <button
+            {/* <button
               className="res-submit-button"
               onClick={downloadInvoice}
             >
               Download Invoice
-            </button>
+            </button> */}
             <button
               className="res-submit-button"
               onClick={handleRedirect}
